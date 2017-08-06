@@ -7,11 +7,16 @@
 //
 
 import UIKit
+import Firebase
 
 class ViewController: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollImage: UIView!
+    
+    let pixelSize = 2
+    
+    //var pixels = [PixelData]()
     
     struct PixelData {
         var a: UInt8 = 0
@@ -64,49 +69,81 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return scrollImage
     }
     
-//    func scrollViewDoubleTapped(recognizer: UITapGestureRecognizer) {
-//        // 1
-//        let pointInView = recognizer.location(in: scrollImage)
-//        
-//        // 2
-//        var newZoomScale = scrollView.zoomScale * 1.5
-//        newZoomScale = min(newZoomScale, scrollView.maximumZoomScale)
-//        
-//        // 3
-//        let scrollViewSize = scrollView.bounds.size
-//        let w = scrollViewSize.width / newZoomScale
-//        let h = scrollViewSize.height / newZoomScale
-//        let x = pointInView.x - (w / 2.0)
-//        let y = pointInView.y - (h / 2.0)
-//        
-//        let rectToZoomTo = CGRect(x:x, y:y, width:w,height: h);
-//        
-//        // 4
-//        scrollView.zoom(to: rectToZoomTo, animated: true)
-//    }
-//    
-//    func centerScrollViewContents() {
-//        let boundsSize = scrollView.bounds.size
-//        var contentsFrame = scrollImage.frame
-//        
-//        if contentsFrame.size.width < boundsSize.width {
-//            contentsFrame.origin.x = (boundsSize.width - contentsFrame.size.width) / 2.0
-//        } else {
-//            contentsFrame.origin.x = 0.0
-//        }
-//        
-//        if contentsFrame.size.height < boundsSize.height {
-//            contentsFrame.origin.y = (boundsSize.height - contentsFrame.size.height) / 2.0
-//        } else {
-//            contentsFrame.origin.y = 0.0
-//        }
-//        
-//        scrollImage.frame = contentsFrame
-//    }
+    func loadPixels() {
+        
+        
+        let ref = Database.database().reference()
+     
+        
+        ref.observe(.value, with: { snapshot in
+            
+            let enumerator = snapshot.children
+            while let obj = enumerator.nextObject() as? DataSnapshot {
+
+                var x = 0
+                var y = 0
+                var size = 1
+                
+                    for cell in obj.children.allObjects as! [DataSnapshot] {
+                        print (cell)
+                    switch cell.key {
+                        case "color": break
+                        case "x": x = cell.value as! Int
+                        case "y": y = cell.value as! Int
+                        case "size": size = cell.value as! Int
+                    default: break
+                    }
+                }
+            
+                let color = UIColor(red: 155, green: 155, blue: 155)
+                if let rgbColor = color.rgb() {
+                    
+                    
+                    
+                    var pixels = [PixelData]()
+                    let pixel = PixelData(a: 255, r: rgbColor.red, g:rgbColor.green, b: rgbColor.blue)
+                    
+                    for _ in 1...size*size {
+                        
+                        pixels.append(pixel)
+                    }
+                    
+                    
+                    
+                    
+                    let image = UIImageView()
+                    image.image = self.imageFromBitmap(pixels: pixels, width: size, height: size)
+                    image.frame = CGRect(x: x, y: y, width: size, height: size)
+                    self.scrollImage.addSubview(image)
+                }
+
+            }
+            
+        })
+    }
+    func showMoreActions(touch: UITapGestureRecognizer) {
+        
+        let touchPoint = touch .location(in: self.scrollImage)
+        
+        addPixel(x: Int(touchPoint.x), y: Int(touchPoint.y))
+    }
     
+    func addPixel(x: Int, y: Int) {
+        
+        let itemRef = Database.database().reference().child("\(x),\(y)")
+            
+        itemRef.child("x").setValue(x)
+        itemRef.child("y").setValue(y)
+        itemRef.child("size").setValue(pixelSize)
+        itemRef.child("color").setValue(121212)
+        
+    }
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        let tap = UITapGestureRecognizer(target: self, action: #selector(showMoreActions))
+        tap.numberOfTapsRequired = 1
+        scrollView.addGestureRecognizer(tap)
         
         scrollView.contentSize = CGSize(width: 50*50, height: 50*50)
         scrollView.delegate = self
@@ -114,37 +151,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 50.0
         scrollView.zoomScale = 1.0
         
-//        // 3
-//        let doubleTapRecognizer = UITapGestureRecognizer(target: self, action: #selector(scrollViewDoubleTapped(recognizer:)))
-//        doubleTapRecognizer.numberOfTapsRequired = 2
-//        doubleTapRecognizer.numberOfTouchesRequired = 1
-//        scrollView.addGestureRecognizer(doubleTapRecognizer)
-//        
-//        // 4
-//        let scrollViewFrame = scrollView.frame
-//        let scaleWidth = scrollViewFrame.size.width / scrollView.contentSize.width
-//        let scaleHeight = scrollViewFrame.size.height / scrollView.contentSize.height
-//        let minScale = min(scaleWidth, scaleHeight);
-//        scrollView.minimumZoomScale = minScale;
-//        
-//        // 5
-//        scrollView.maximumZoomScale = 1.0
-//        scrollView.zoomScale = minScale;
-//        
-//        // 6
-//        centerScrollViewContents()
-       
-
+        loadPixels()
         
-        var pixels = [PixelData]()
+      
         
-        let red = PixelData(a: 255, r: 255, g: 0, b: 0)
-        let green = PixelData(a: 255, r: 0, g: 255, b: 0)
-        let blue = PixelData(a: 255, r: 0, g: 0, b: 255)
-        
-        for _ in 1...9 {
-            pixels.append(red)
-        }
+//        let red = PixelData(a: 255, r: 255, g: 0, b: 0)
+//        let green = PixelData(a: 255, r: 0, g: 255, b: 0)
+//        let blue = PixelData(a: 255, r: 0, g: 0, b: 255)
+//        
+//        for _ in 1...900 {
+//            pixels.append(red)
+//        }
 //        for _ in 1...300 {
 //            pixels.append(green)
 //        }
@@ -152,14 +169,15 @@ class ViewController: UIViewController, UIScrollViewDelegate {
 //            pixels.append(blue)
 //        }
         
-        for i in 1...50 {
-            let image = UIImageView()
-            image.image = imageFromBitmap(pixels: pixels, width: 3, height: 3)
-            image.frame = CGRect(x: i*50, y: i*50, width: 3, height: 3)
-            scrollImage.addSubview(image)
-        }
-        
-        scrollView.addSubview(scrollImage)
+//        for i in 1...50 {
+//            let image = UIImageView()
+//            print(pixels.count)
+//            image.image = imageFromBitmap(pixels: pixels, width: 30, height: 30)
+//            image.frame = CGRect(x: i*50, y: i*50, width: 30, height: 30)
+//            scrollImage.addSubview(image)
+//        }
+//        
+        //scrollView.addSubview(scrollImage)
         // Do any additional setup after loading the view, typically from a nib.
     }
 
