@@ -76,15 +76,17 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         
         let ref = Database.database().reference()
         
+        ref.queryOrdered(byChild: "timeline").queryLimited(toFirst: 1).observe(.childMoved, with: { snapshot in
         
-        ref.observe(.value, with: { snapshot in
             
-            for view in self.scrollImage.subviews {
-                self.scrollImage.willRemoveSubview(view)
+            for i in snapshot.children {
+                print(i)
             }
             
             let enumerator = snapshot.children
-            while let obj = enumerator.nextObject() as? DataSnapshot {
+            
+            
+            //while let obj = enumerator.nextObject() as? DataSnapshot {
                 
                 var x = 0
                 var y = 0
@@ -92,7 +94,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 var g:UInt8 = 0
                 var b:UInt8 = 0
                 
-                for cell in obj.children.allObjects as! [DataSnapshot] {
+                for cell in enumerator.allObjects as! [DataSnapshot] {
+               
                     switch cell.key {
                 
                     case "x": x = cell.value as! Int
@@ -112,7 +115,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 
                 
                 self.scrollImage.addSubview(image)
-            }
+            
         })
     }
     func showMoreActions(touch: UITapGestureRecognizer) {
@@ -122,15 +125,31 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         addPixel(x: Int(touchPoint.x), y: Int(touchPoint.y))
     }
     
+    var Timestamp: TimeInterval {
+        return NSDate().timeIntervalSince1970 * 1000
+    }
+    
     func addPixel(x: Int, y: Int) {
         
-        let itemRef = Database.database().reference().child("\(x),\(y)")
+        var itemRef = Database.database().reference().child("\(x),\(y)")
             
+        
+        let t1 = Timestamp
+        let time = 0 - Int(t1)
+        
+        
+        //itemRef = Database.database().reference().child("\(x),\(y)").child("values")
         itemRef.child("x").setValue(x)
         itemRef.child("y").setValue(y)
         itemRef.child("r").setValue(rPixel)
         itemRef.child("g").setValue(gPixel)
         itemRef.child("b").setValue(bPixel)
+        
+        itemRef = Database.database().reference().child("\(x),\(y)")
+        
+        itemRef.child("timeline").setValue(time)
+        
+        
     }
     
     func setupColorPicker() {
