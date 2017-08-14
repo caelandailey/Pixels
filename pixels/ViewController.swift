@@ -71,23 +71,58 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         return scrollImage
     }
     
+    func loadAllPixels() {
+        let ref = Database.database().reference()
+        
+        ref.observeSingleEvent(of: .value, with: { snapshot in
+            print(snapshot)
+            
+            let enumerator = snapshot.children
+            
+            while let obj = enumerator.nextObject() as? DataSnapshot {
+            
+            var x = 0
+            var y = 0
+            var r:UInt8 = 0
+            var g:UInt8 = 0
+            var b:UInt8 = 0
+            
+            for cell in obj.children.allObjects as! [DataSnapshot] {
+                
+                switch cell.key {
+                    
+                case "x": x = cell.value as! Int
+                case "y": y = cell.value as! Int
+                case "r": r = cell.value as! UInt8
+                case "g": g = cell.value as! UInt8
+                case "b": b = cell.value as! UInt8
+                default: break
+                }
+            }
+            
+            let pixel = PixelData(a: 255, r: r, g:g, b: b)
+            
+            let image = UIImageView()
+            image.image = self.imageFromBitmap(pixels: [pixel], width: 1, height: 1)
+            image.frame = CGRect(x: x, y: y, width: 1, height: 1)
+            
+            
+            self.scrollImage.addSubview(image)
+            }
+        })
+        
+        
+
+    }
     func loadPixels() {
         
         
         let ref = Database.database().reference()
         
         ref.queryOrdered(byChild: "timeline").queryLimited(toFirst: 1).observe(.childMoved, with: { snapshot in
-        
-            
-            for i in snapshot.children {
-                print(i)
-            }
             
             let enumerator = snapshot.children
             
-            
-            //while let obj = enumerator.nextObject() as? DataSnapshot {
-                
                 var x = 0
                 var y = 0
                 var r:UInt8 = 0
@@ -112,10 +147,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
                 let image = UIImageView()
                 image.image = self.imageFromBitmap(pixels: [pixel], width: 1, height: 1)
                 image.frame = CGRect(x: x, y: y, width: 1, height: 1)
-                
-                
-                self.scrollImage.addSubview(image)
             
+                self.scrollImage.addSubview(image)
         })
     }
     func showMoreActions(touch: UITapGestureRecognizer) {
@@ -132,24 +165,16 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     func addPixel(x: Int, y: Int) {
         
         var itemRef = Database.database().reference().child("\(x),\(y)")
-            
         
         let t1 = Timestamp
         let time = 0 - Int(t1)
         
-        
-        //itemRef = Database.database().reference().child("\(x),\(y)").child("values")
         itemRef.child("x").setValue(x)
         itemRef.child("y").setValue(y)
         itemRef.child("r").setValue(rPixel)
         itemRef.child("g").setValue(gPixel)
         itemRef.child("b").setValue(bPixel)
-        
-        itemRef = Database.database().reference().child("\(x),\(y)")
-        
         itemRef.child("timeline").setValue(time)
-        
-        
     }
     
     func setupColorPicker() {
@@ -233,14 +258,8 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         scrollView.maximumZoomScale = 50.0
         scrollView.zoomScale = 1.0
         
+        loadAllPixels()
         loadPixels()
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 
