@@ -7,92 +7,127 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		02D152AF3EEB3A5B5224C5BD3C38B091 /* Pods-pixels-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D994CA6407240EB55572E82D398CBF6B /* Pods-pixels-dummy.m */; };
 		05B1F02560378D28FEBD4E8F6D293216 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = CC2B0CF6AE6BF2645B9E81C603548061 /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = AACF16417F7B6A5674D848B2B658CE3E /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 3CF3D359ECC7DAF3021428DCF94FC61C /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
-		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F856E98627FEBA34AC4356BD4F16EE1D /* nanopb-dummy.m */; };
-		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = 56D7F2BBA3B0577B0AD9BFC0548A842B /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = B3B26323B768B6E5CF25C980F2F95AB0 /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
-		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = 2AE7707D7A9EDC56D302D3A9DB2F70F1 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
-		7D03FE51834BC8079C3265F3E61920BB /* Pods-pixels-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFB5A1AA98486DF7713177FF95BFEA1 /* Pods-pixels-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = 5768DCD5DCE66ADD6BA552AD86300916 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 32F7FE07DA1753C2DC18C0BD35FABD5A /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1C9420F6D4D38EEF754615DFAD27CB7B /* ChromaHandle.swift in Sources */ = {isa = PBXBuildFile; fileRef = FC86D5CC0467EF10091A7C2B657D2DC4 /* ChromaHandle.swift */; };
+		1F9EA1158D06B25338F3FC9FDFB79931 /* ChromaColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F33E851A5BC74BF01E5C78F9795BABF7 /* ChromaColorPicker.swift */; };
+		248C873B272A55DAE90DD71B69AF7E9D /* UIColor+Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 349CE0118D92299FF29A14A6C3DC6087 /* UIColor+Utilities.swift */; };
+		29FEADDF2086FDEA7D5BA87DD23B08C6 /* pb_decode.h in Headers */ = {isa = PBXBuildFile; fileRef = 41ACA4ADA96FC5C1393556E7094808EF /* pb_decode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		351B1B7CD26B8BB46994293A8A466140 /* Pods-pixels-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D994CA6407240EB55572E82D398CBF6B /* Pods-pixels-dummy.m */; };
+		392F2CF142BAA751AC1BB61D8B757D98 /* pb.h in Headers */ = {isa = PBXBuildFile; fileRef = B6E19773F71B040FA7B05079F47210E9 /* pb.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A13496946ED696356E9741FA6CDDB0D /* ChromaColorPicker-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BF624B109E73C85E870DC2A54D73BD83 /* ChromaColorPicker-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A50F5C8ECED9627F2EBD97F61BD376D /* pb_common.c in Sources */ = {isa = PBXBuildFile; fileRef = 106BC6123ECC29B23F641BCDB1791A3F /* pb_common.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc -fno-objc-arc"; }; };
+		468DFD90B6C4DA2F7CFA0C1C89F1B615 /* nanopb-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F11D97939CDF741C3A56ACF478D18855 /* nanopb-dummy.m */; };
+		50229A0E5D760C7041EE6B62F8FA4B4B /* ChromaShadeSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A145C2F59CA3A78D7251744806845437 /* ChromaShadeSlider.swift */; };
+		541C5362289CC44D4F067D097F231250 /* GTMDefines.h in Headers */ = {isa = PBXBuildFile; fileRef = CC7B36D0167F580363B3BEA7A4AA641B /* GTMDefines.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		54F580BF4588159D6A61F21D15591805 /* pb_decode.c in Sources */ = {isa = PBXBuildFile; fileRef = 21B532D0E4C2E9DD4A529C4755BDCF4E /* pb_decode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		55D8D5D912CFD2F3584E4553C2EAD734 /* pb_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = DA245820AB78400ADC48BCEFA3CFC834 /* pb_encode.c */; settings = {COMPILER_FLAGS = "-fno-objc-arc -fno-objc-arc"; }; };
+		806BAA4E00218D70995697C4400BE7A0 /* pb_common.h in Headers */ = {isa = PBXBuildFile; fileRef = D81CFBF2C2CA0581BE5DB221A6D99350 /* pb_common.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81E4B6988FF26F9249B79C6C8CC667B4 /* GoogleToolboxForMac-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = B7940104C2AAAA8A84398DCB24D80EFA /* GoogleToolboxForMac-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		8FA4596E91DB11BCCF244B62782D1259 /* ChromaAddButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 639FD4B9470C0B3E4FB94B6D4DD65F4E /* ChromaAddButton.swift */; };
 		93D51748565CFEB9490FBA7DA993C5C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		C1F23BE0C8FA386F0D8F3824816C7DB5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
-		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = 57F1797A40FD306C28F9563F1DDBF00B /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 765DC6B7C69275DFE1BDC87D0643FD13 /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = BD519FCDBC8B3800A23DDF14EDD555BB /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
-		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 78A7844B55E6AEAF3BD1DE064F2BE574 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 880716A5F40ED603A2FF03304E2EAE65 /* GoogleToolboxForMac-dummy.m */; };
+		C780084EF51C6D46AF3F245335AF8851 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		C7B49E0E79109138FBB2E428C1D7CF18 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */; };
+		D66EF81FF152D235E4C989A3F8B8ED8C /* Pods-pixels-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = FBFB5A1AA98486DF7713177FF95BFEA1 /* Pods-pixels-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DBFECCB0BBE3F11CC41A3C1A8C4879D3 /* GTMNSData+zlib.h in Headers */ = {isa = PBXBuildFile; fileRef = CC48B73BB7D53DC39943EB6193E5E3A0 /* GTMNSData+zlib.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E181395E73163EB702FCE9A21403D67B /* pb_encode.h in Headers */ = {isa = PBXBuildFile; fileRef = A7809B6D2A1D71901D3235B7E71B8D0C /* pb_encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F7D889906DECB078EAAECB9D4A320E9C /* GTMNSData+zlib.m in Sources */ = {isa = PBXBuildFile; fileRef = 723A15BF1BEE30568B13739433A7D346 /* GTMNSData+zlib.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		F86AA6170FB017A8960C6D1739C4D2D6 /* ChromaColorPicker-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FABB25350C963337237DCA6403034F65 /* ChromaColorPicker-dummy.m */; };
+		F9D92BA503505CB48EF4ECF0DDF57686 /* nanopb-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5A03C5754448D6DDECDE9E43C5555C75 /* nanopb-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		FAC3F3CAABA60EF76069431C5BB5032A /* GoogleToolboxForMac-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = BE467DADC37ECBED3B779B36047DB8B6 /* GoogleToolboxForMac-dummy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		41D568B657F9C75521AF33DE07C3E889 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
-			remoteInfo = nanopb;
-		};
-		6861554888A901E0DC46D7BB84B548A5 /* PBXContainerItemProxy */ = {
+		2A34588CBAA1143283DD4D1463FF2846 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 00103D6C821BE85971C563025527BA5D;
 			remoteInfo = GoogleToolboxForMac;
 		};
+		4E40DF6DD4E832938D0A143BBC509DB4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = E4DD95323C54A78F879DAB0F1508B8E7;
+			remoteInfo = nanopb;
+		};
+		908BF3122A977C76211F41B50E3E37ED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5D5B67B3AA00C5080957A07A50856C9F;
+			remoteInfo = ChromaColorPicker;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0C5B3F76ED95F3BCCAB7DCE804E72A9F /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
-		185AF76827B561885DFEAAF0D7E6F923 /* Pods_pixels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pixels.framework; path = "Pods-pixels.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		1C4B4D9386A453D0035E4A8BE29244AF /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
-		1F98FD7FEDD2E9262FA05C30105163D3 /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
-		2AE7707D7A9EDC56D302D3A9DB2F70F1 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
-		32F7FE07DA1753C2DC18C0BD35FABD5A /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
-		3CF3D359ECC7DAF3021428DCF94FC61C /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		01CABD4C8D2DA4C24611A204293A9E23 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		0678DDC54F1A80ED1FD4A23B7EF66CBB /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
+		106BC6123ECC29B23F641BCDB1791A3F /* pb_common.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_common.c; sourceTree = "<group>"; };
+		12A92BCA60D8F6ABDB89C5858C39CD95 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		21B532D0E4C2E9DD4A529C4755BDCF4E /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
+		26EA22ED8CEC92AC45489F14B2B33BA7 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = nanopb.modulemap; sourceTree = "<group>"; };
+		30BA33C8B4F2619DACFB272C304F2C1A /* FirebaseNanoPB.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseNanoPB.framework; path = Frameworks/FirebaseNanoPB.framework; sourceTree = "<group>"; };
+		32D434212EDEE4F3E9BB5D0E543D6D6E /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
+		345EE9EA6C9640E51372FAB4799081E0 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		349CE0118D92299FF29A14A6C3DC6087 /* UIColor+Utilities.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+Utilities.swift"; path = "ChromaColorPicker/UIColor+Utilities.swift"; sourceTree = "<group>"; };
+		41ACA4ADA96FC5C1393556E7094808EF /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
 		43569B2270D810F5E6D44B4CF1B8C096 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		473106A5753542BE28E488F06C06F7DE /* Pods-pixels.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pixels.release.xcconfig"; sourceTree = "<group>"; };
-		480883B1D49DCDD9640312E959A18673 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		55F9EEC828D24EB6B1208CF02D6689F1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		56D7F2BBA3B0577B0AD9BFC0548A842B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
-		5768DCD5DCE66ADD6BA552AD86300916 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
-		57F1797A40FD306C28F9563F1DDBF00B /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
-		5956636F00BDF0BF3793E5EF7774CF40 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4BE6BACC493441D32B8F1C379170FD5B /* GoogleToolboxForMac-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-prefix.pch"; sourceTree = "<group>"; };
+		4DF7CC4B5D872B66B4078D78E0DA0880 /* GoogleToolboxForMac.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = GoogleToolboxForMac.framework; path = GoogleToolboxForMac.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5296A705AFD92847E67B369126943C90 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
+		5A03C5754448D6DDECDE9E43C5555C75 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
 		5CFDA9EA14FD3454E88CF51676C1229C /* Pods-pixels.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-pixels.debug.xcconfig"; sourceTree = "<group>"; };
+		639FD4B9470C0B3E4FB94B6D4DD65F4E /* ChromaAddButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaAddButton.swift; path = ChromaColorPicker/ChromaAddButton.swift; sourceTree = "<group>"; };
 		6604A7D69453B4569E4E4827FB9155A9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		6D216819B71AF55ADAE574A20899D77C /* Pods-pixels-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-pixels-acknowledgements.markdown"; sourceTree = "<group>"; };
-		765DC6B7C69275DFE1BDC87D0643FD13 /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
-		77D27A9BD30251145C7878BA5E729E31 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
-		78A7844B55E6AEAF3BD1DE064F2BE574 /* nanopb-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-umbrella.h"; sourceTree = "<group>"; };
-		7BE9562C7EFCC143DE11CDC2D6294204 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C8D259161228AD80937A0F8C544CF3F /* GoogleToolboxForMac.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = GoogleToolboxForMac.modulemap; sourceTree = "<group>"; };
-		874FAC58A676B35C675861EBCA1E3D22 /* nanopb.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = nanopb.modulemap; sourceTree = "<group>"; };
-		880716A5F40ED603A2FF03304E2EAE65 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		6FBCA57C6C2D861B2DC5DB1F499BF2B7 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		723A15BF1BEE30568B13739433A7D346 /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
+		8430130AAEAED5DD8498B22BD962F15F /* FirebaseDatabase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseDatabase.framework; path = Frameworks/FirebaseDatabase.framework; sourceTree = "<group>"; };
 		93979B5765C23125016F2DDE4E0F731E /* Pods-pixels-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-pixels-acknowledgements.plist"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		97D91206338CBB740CD0FFFA727F9DAC /* ChromaColorPicker.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ChromaColorPicker.xcconfig; sourceTree = "<group>"; };
+		9B9513CB8B91A8AD1D6F816105BC2E80 /* ChromaColorPicker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ChromaColorPicker.framework; path = ChromaColorPicker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C97006E321FD64DCB6B7F1001FFF93F /* ChromaColorPicker-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChromaColorPicker-prefix.pch"; sourceTree = "<group>"; };
+		9CC0D539BC7F8E48363B122A7FDEDF4A /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		9E53C35874A3DD489D655DE2815EC5BF /* Pods-pixels-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pixels-resources.sh"; sourceTree = "<group>"; };
-		A3FD1AC46277EA6C7F3C190F4707C092 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
-		A99927BD497C953CA6707027449BEE6D /* FirebaseAnalytics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseAnalytics.framework; path = Frameworks/FirebaseAnalytics.framework; sourceTree = "<group>"; };
-		AACF16417F7B6A5674D848B2B658CE3E /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
-		AD0E055AAB02750D7D2B2B6C2D448DA0 /* nanopb-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "nanopb-prefix.pch"; sourceTree = "<group>"; };
-		B3B26323B768B6E5CF25C980F2F95AB0 /* pb_decode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_decode.c; sourceTree = "<group>"; };
-		BD519FCDBC8B3800A23DDF14EDD555BB /* GTMNSData+zlib.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = "GTMNSData+zlib.m"; path = "Foundation/GTMNSData+zlib.m"; sourceTree = "<group>"; };
-		CC2B0CF6AE6BF2645B9E81C603548061 /* pb_decode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_decode.h; sourceTree = "<group>"; };
-		D0BBE3EBF5CF974C22C4442430C630A9 /* FirebaseInstanceID.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseInstanceID.framework; path = Frameworks/FirebaseInstanceID.framework; sourceTree = "<group>"; };
+		A145C2F59CA3A78D7251744806845437 /* ChromaShadeSlider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaShadeSlider.swift; path = ChromaColorPicker/ChromaShadeSlider.swift; sourceTree = "<group>"; };
+		A175484F0E0F45E3D8475A4926317C38 /* nanopb.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = nanopb.framework; path = nanopb.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A7809B6D2A1D71901D3235B7E71B8D0C /* pb_encode.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_encode.h; sourceTree = "<group>"; };
+		B60DE71A8DD86F98CA1EEBCAE35D2FE6 /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
+		B6E19773F71B040FA7B05079F47210E9 /* pb.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb.h; sourceTree = "<group>"; };
+		B7940104C2AAAA8A84398DCB24D80EFA /* GoogleToolboxForMac-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "GoogleToolboxForMac-umbrella.h"; sourceTree = "<group>"; };
+		BE467DADC37ECBED3B779B36047DB8B6 /* GoogleToolboxForMac-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "GoogleToolboxForMac-dummy.m"; sourceTree = "<group>"; };
+		BF624B109E73C85E870DC2A54D73BD83 /* ChromaColorPicker-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ChromaColorPicker-umbrella.h"; sourceTree = "<group>"; };
+		CC48B73BB7D53DC39943EB6193E5E3A0 /* GTMNSData+zlib.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = "GTMNSData+zlib.h"; path = "Foundation/GTMNSData+zlib.h"; sourceTree = "<group>"; };
+		CC7B36D0167F580363B3BEA7A4AA641B /* GTMDefines.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = GTMDefines.h; sourceTree = "<group>"; };
 		D2127307DE2942141DCAC560D9ADB4CE /* Pods-pixels.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-pixels.modulemap"; sourceTree = "<group>"; };
+		D2458B44F3C884F25508FCDCD474F8AB /* Pods_pixels.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_pixels.framework; path = "Pods-pixels.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D5282EA6B60F47CEEF84CC09906D491F /* Pods-pixels-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-pixels-frameworks.sh"; sourceTree = "<group>"; };
-		D8D68B06D69182C396EE72128A465513 /* GoogleToolboxForMac.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = GoogleToolboxForMac.xcconfig; sourceTree = "<group>"; };
+		D81CFBF2C2CA0581BE5DB221A6D99350 /* pb_common.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = pb_common.h; sourceTree = "<group>"; };
 		D994CA6407240EB55572E82D398CBF6B /* Pods-pixels-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-pixels-dummy.m"; sourceTree = "<group>"; };
-		EA204915263836E007C34C4D113303CA /* Firebase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Firebase.h; path = Core/Sources/Firebase.h; sourceTree = "<group>"; };
-		F856E98627FEBA34AC4356BD4F16EE1D /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
+		D9BD54ADCD65CB03207C72AADA311A22 /* nanopb.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = nanopb.xcconfig; sourceTree = "<group>"; };
+		DA245820AB78400ADC48BCEFA3CFC834 /* pb_encode.c */ = {isa = PBXFileReference; includeInIndex = 1; path = pb_encode.c; sourceTree = "<group>"; };
+		E35DEFDF0263957DD737AF36826B0371 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EF3AEF17E8F12A48F71999AFBFCA9C31 /* ChromaColorPicker.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = ChromaColorPicker.modulemap; sourceTree = "<group>"; };
+		F11D97939CDF741C3A56ACF478D18855 /* nanopb-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "nanopb-dummy.m"; sourceTree = "<group>"; };
+		F33E851A5BC74BF01E5C78F9795BABF7 /* ChromaColorPicker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaColorPicker.swift; path = ChromaColorPicker/ChromaColorPicker.swift; sourceTree = "<group>"; };
+		F79B200EC2461CD19562483D64045C88 /* FirebaseCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCore.framework; path = Frameworks/FirebaseCore.framework; sourceTree = "<group>"; };
+		FABB25350C963337237DCA6403034F65 /* ChromaColorPicker-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ChromaColorPicker-dummy.m"; sourceTree = "<group>"; };
 		FBFB5A1AA98486DF7713177FF95BFEA1 /* Pods-pixels-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-pixels-umbrella.h"; sourceTree = "<group>"; };
-		FEFAF9AF2523DB5F648457F06E283FB7 /* FirebaseCoreDiagnostics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FirebaseCoreDiagnostics.framework; path = Frameworks/FirebaseCoreDiagnostics.framework; sourceTree = "<group>"; };
+		FC86D5CC0467EF10091A7C2B657D2DC4 /* ChromaHandle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ChromaHandle.swift; path = ChromaColorPicker/ChromaHandle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		113420200746533B9EF2ECB6DA888ACE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C780084EF51C6D46AF3F245335AF8851 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		971041836592E28ADEEDA495A96A62A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -101,11 +136,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		A9EC30C4F218B9FAD61B5A6A3D9A4440 /* Frameworks */ = {
+		F22620ADA582D4A038502CCF209EFDB7 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C1F23BE0C8FA386F0D8F3824816C7DB5 /* Foundation.framework in Frameworks */,
+				C7B49E0E79109138FBB2E428C1D7CF18 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,61 +155,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A23E2F6310F4A18FDDA72DB8FD86396 /* FirebaseAnalytics */ = {
+		167D27002339C2058EFE78B9FFA412FA /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
-				8FEFD2477CC9A2ACAF00E087900622E4 /* Frameworks */,
+				8259E3C50706911669FA53B18CC9B06F /* Core */,
 			);
-			name = FirebaseAnalytics;
-			path = FirebaseAnalytics;
+			name = Firebase;
+			path = Firebase;
 			sourceTree = "<group>";
 		};
-		207FCAA9BE9EEC647EA32EF35AE360AF /* Products */ = {
+		19D266493C0CD70CCF9E4891F30274A5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5956636F00BDF0BF3793E5EF7774CF40 /* GoogleToolboxForMac.framework */,
-				480883B1D49DCDD9640312E959A18673 /* nanopb.framework */,
-				185AF76827B561885DFEAAF0D7E6F923 /* Pods_pixels.framework */,
+				F79B200EC2461CD19562483D64045C88 /* FirebaseCore.framework */,
+				6FBCA57C6C2D861B2DC5DB1F499BF2B7 /* FirebaseCoreDiagnostics.framework */,
+				30BA33C8B4F2619DACFB272C304F2C1A /* FirebaseNanoPB.framework */,
 			);
-			name = Products;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		22241A4BF8D1F82548AF924311538559 /* Core */ = {
+		1AE47D260E058C75E2FE1D5BCB258232 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				EA204915263836E007C34C4D113303CA /* Firebase.h */,
+				0678DDC54F1A80ED1FD4A23B7EF66CBB /* GoogleToolboxForMac.modulemap */,
+				345EE9EA6C9640E51372FAB4799081E0 /* GoogleToolboxForMac.xcconfig */,
+				BE467DADC37ECBED3B779B36047DB8B6 /* GoogleToolboxForMac-dummy.m */,
+				4BE6BACC493441D32B8F1C379170FD5B /* GoogleToolboxForMac-prefix.pch */,
+				B7940104C2AAAA8A84398DCB24D80EFA /* GoogleToolboxForMac-umbrella.h */,
+				E35DEFDF0263957DD737AF36826B0371 /* Info.plist */,
 			);
-			name = Core;
+			name = "Support Files";
+			path = "../Target Support Files/GoogleToolboxForMac";
 			sourceTree = "<group>";
 		};
-		238EA0BFE6F684416488B162459E6E8B /* encode */ = {
+		243A73FCF4BC48FC31019D2C7D861F6A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				EF3AEF17E8F12A48F71999AFBFCA9C31 /* ChromaColorPicker.modulemap */,
+				97D91206338CBB740CD0FFFA727F9DAC /* ChromaColorPicker.xcconfig */,
+				FABB25350C963337237DCA6403034F65 /* ChromaColorPicker-dummy.m */,
+				9C97006E321FD64DCB6B7F1001FFF93F /* ChromaColorPicker-prefix.pch */,
+				BF624B109E73C85E870DC2A54D73BD83 /* ChromaColorPicker-umbrella.h */,
+				9CC0D539BC7F8E48363B122A7FDEDF4A /* Info.plist */,
 			);
-			name = encode;
+			name = "Support Files";
+			path = "../Target Support Files/ChromaColorPicker";
 			sourceTree = "<group>";
 		};
-		3DE0B27FC1248452774F515645D42A65 /* FirebaseCore */ = {
+		2D7AD87A26F4F7AA708A7E70901F4E93 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9DF924A92C3B6C7A591237FF3828204A /* Frameworks */,
+				8430130AAEAED5DD8498B22BD962F15F /* FirebaseDatabase.framework */,
 			);
-			name = FirebaseCore;
-			path = FirebaseCore;
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		41B614126BD8F454BAA204063C0E0A6E /* Pods */ = {
+		4FBBA9114245B0561B7724964A460B30 /* FirebaseDatabase */ = {
 			isa = PBXGroup;
 			children = (
-				8DB8B5CE53452A72FE2B9755CFCE6229 /* Firebase */,
-				0A23E2F6310F4A18FDDA72DB8FD86396 /* FirebaseAnalytics */,
-				3DE0B27FC1248452774F515645D42A65 /* FirebaseCore */,
-				F527DBFF51C42556467F2E96C655951E /* FirebaseDatabase */,
-				90C4947D2A626BFEB88C797F3211CFCA /* FirebaseInstanceID */,
-				739F2D1FE257780EF4C0532040003FD6 /* GoogleToolboxForMac */,
-				A8FF8E4EDB033A55926E3023A05DFB4F /* nanopb */,
+				2D7AD87A26F4F7AA708A7E70901F4E93 /* Frameworks */,
 			);
-			name = Pods;
+			name = FirebaseDatabase;
+			path = FirebaseDatabase;
+			sourceTree = "<group>";
+		};
+		52610360B35F6C77A4089027D9386D30 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				12A92BCA60D8F6ABDB89C5858C39CD95 /* Info.plist */,
+				26EA22ED8CEC92AC45489F14B2B33BA7 /* nanopb.modulemap */,
+				D9BD54ADCD65CB03207C72AADA311A22 /* nanopb.xcconfig */,
+				F11D97939CDF741C3A56ACF478D18855 /* nanopb-dummy.m */,
+				5296A705AFD92847E67B369126943C90 /* nanopb-prefix.pch */,
+				5A03C5754448D6DDECDE9E43C5555C75 /* nanopb-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/nanopb";
 			sourceTree = "<group>";
 		};
 		526A6FD58D8EB51C8003EB2D05803070 /* Targets Support Files */ = {
@@ -185,45 +241,27 @@
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		61CCEC50628FDED4B580E426D2ECE8D7 /* Frameworks */ = {
+		653960365EB4D6CBD32BE530178CCD75 /* ChromaColorPicker */ = {
 			isa = PBXGroup;
 			children = (
-				0C5B3F76ED95F3BCCAB7DCE804E72A9F /* FirebaseDatabase.framework */,
+				639FD4B9470C0B3E4FB94B6D4DD65F4E /* ChromaAddButton.swift */,
+				F33E851A5BC74BF01E5C78F9795BABF7 /* ChromaColorPicker.swift */,
+				FC86D5CC0467EF10091A7C2B657D2DC4 /* ChromaHandle.swift */,
+				A145C2F59CA3A78D7251744806845437 /* ChromaShadeSlider.swift */,
+				349CE0118D92299FF29A14A6C3DC6087 /* UIColor+Utilities.swift */,
+				243A73FCF4BC48FC31019D2C7D861F6A /* Support Files */,
 			);
-			name = Frameworks;
+			name = ChromaColorPicker;
+			path = ChromaColorPicker;
 			sourceTree = "<group>";
 		};
-		659AB55489DC9130A3B2A4F5DC53917C /* Support Files */ = {
+		73FC12C1A6AFF4F9783AEDDD56F42E0B /* FirebaseInstanceID */ = {
 			isa = PBXGroup;
 			children = (
-				7C8D259161228AD80937A0F8C544CF3F /* GoogleToolboxForMac.modulemap */,
-				D8D68B06D69182C396EE72128A465513 /* GoogleToolboxForMac.xcconfig */,
-				880716A5F40ED603A2FF03304E2EAE65 /* GoogleToolboxForMac-dummy.m */,
-				1F98FD7FEDD2E9262FA05C30105163D3 /* GoogleToolboxForMac-prefix.pch */,
-				32F7FE07DA1753C2DC18C0BD35FABD5A /* GoogleToolboxForMac-umbrella.h */,
-				55F9EEC828D24EB6B1208CF02D6689F1 /* Info.plist */,
+				B5FC31B82C41005128B7806D0534BBAA /* Frameworks */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/GoogleToolboxForMac";
-			sourceTree = "<group>";
-		};
-		739F2D1FE257780EF4C0532040003FD6 /* GoogleToolboxForMac */ = {
-			isa = PBXGroup;
-			children = (
-				7BED63E9BB256E9092B0B8FE2DCEF56A /* Defines */,
-				A0A51F5FD59056B241A771927B5EA3D4 /* NSData+zlib */,
-				659AB55489DC9130A3B2A4F5DC53917C /* Support Files */,
-			);
-			name = GoogleToolboxForMac;
-			path = GoogleToolboxForMac;
-			sourceTree = "<group>";
-		};
-		7BED63E9BB256E9092B0B8FE2DCEF56A /* Defines */ = {
-			isa = PBXGroup;
-			children = (
-				56D7F2BBA3B0577B0AD9BFC0548A842B /* GTMDefines.h */,
-			);
-			name = Defines;
+			name = FirebaseInstanceID;
+			path = FirebaseInstanceID;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -231,81 +269,87 @@
 			children = (
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
-				41B614126BD8F454BAA204063C0E0A6E /* Pods */,
-				207FCAA9BE9EEC647EA32EF35AE360AF /* Products */,
+				E75617A633852C20848199F31B630738 /* Pods */,
+				809048DFDEC3BD8063A73B4054AC36DB /* Products */,
 				526A6FD58D8EB51C8003EB2D05803070 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
-		8DB8B5CE53452A72FE2B9755CFCE6229 /* Firebase */ = {
+		809048DFDEC3BD8063A73B4054AC36DB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				22241A4BF8D1F82548AF924311538559 /* Core */,
+				9B9513CB8B91A8AD1D6F816105BC2E80 /* ChromaColorPicker.framework */,
+				4DF7CC4B5D872B66B4078D78E0DA0880 /* GoogleToolboxForMac.framework */,
+				A175484F0E0F45E3D8475A4926317C38 /* nanopb.framework */,
+				D2458B44F3C884F25508FCDCD474F8AB /* Pods_pixels.framework */,
 			);
-			name = Firebase;
-			path = Firebase;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		8FEFD2477CC9A2ACAF00E087900622E4 /* Frameworks */ = {
+		8259E3C50706911669FA53B18CC9B06F /* Core */ = {
 			isa = PBXGroup;
 			children = (
-				A99927BD497C953CA6707027449BEE6D /* FirebaseAnalytics.framework */,
+				B60DE71A8DD86F98CA1EEBCAE35D2FE6 /* Firebase.h */,
 			);
-			name = Frameworks;
+			name = Core;
 			sourceTree = "<group>";
 		};
-		90C4947D2A626BFEB88C797F3211CFCA /* FirebaseInstanceID */ = {
+		91B45CDC12FF6D148A3A3B0ABDDC6680 /* NSData+zlib */ = {
 			isa = PBXGroup;
 			children = (
-				9C9D89F4065AB9673CF9248F0E8820BD /* Frameworks */,
-			);
-			name = FirebaseInstanceID;
-			path = FirebaseInstanceID;
-			sourceTree = "<group>";
-		};
-		9C9D89F4065AB9673CF9248F0E8820BD /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				D0BBE3EBF5CF974C22C4442430C630A9 /* FirebaseInstanceID.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		9DF924A92C3B6C7A591237FF3828204A /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				77D27A9BD30251145C7878BA5E729E31 /* FirebaseCore.framework */,
-				FEFAF9AF2523DB5F648457F06E283FB7 /* FirebaseCoreDiagnostics.framework */,
-				1C4B4D9386A453D0035E4A8BE29244AF /* FirebaseNanoPB.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		A0A51F5FD59056B241A771927B5EA3D4 /* NSData+zlib */ = {
-			isa = PBXGroup;
-			children = (
-				57F1797A40FD306C28F9563F1DDBF00B /* GTMNSData+zlib.h */,
-				BD519FCDBC8B3800A23DDF14EDD555BB /* GTMNSData+zlib.m */,
+				CC48B73BB7D53DC39943EB6193E5E3A0 /* GTMNSData+zlib.h */,
+				723A15BF1BEE30568B13739433A7D346 /* GTMNSData+zlib.m */,
 			);
 			name = "NSData+zlib";
 			sourceTree = "<group>";
 		};
-		A8FF8E4EDB033A55926E3023A05DFB4F /* nanopb */ = {
+		9ACD495BC77D6EA8C678BFB63D266B4E /* encode */ = {
 			isa = PBXGroup;
 			children = (
-				AACF16417F7B6A5674D848B2B658CE3E /* pb.h */,
-				3CF3D359ECC7DAF3021428DCF94FC61C /* pb_common.c */,
-				5768DCD5DCE66ADD6BA552AD86300916 /* pb_common.h */,
-				B3B26323B768B6E5CF25C980F2F95AB0 /* pb_decode.c */,
-				CC2B0CF6AE6BF2645B9E81C603548061 /* pb_decode.h */,
-				2AE7707D7A9EDC56D302D3A9DB2F70F1 /* pb_encode.c */,
-				765DC6B7C69275DFE1BDC87D0643FD13 /* pb_encode.h */,
-				DCA2F2045316182977DBF1C71095BEF5 /* decode */,
-				238EA0BFE6F684416488B162459E6E8B /* encode */,
-				FA3FEBD1EA2F082C5F2B6302767F0987 /* Support Files */,
 			);
-			name = nanopb;
-			path = nanopb;
+			name = encode;
+			sourceTree = "<group>";
+		};
+		9AFD2738A7091BE77214DF8EB26DEB3A /* Defines */ = {
+			isa = PBXGroup;
+			children = (
+				CC7B36D0167F580363B3BEA7A4AA641B /* GTMDefines.h */,
+			);
+			name = Defines;
+			sourceTree = "<group>";
+		};
+		A75F5B69793171DC9701964AE7A06214 /* FirebaseAnalytics */ = {
+			isa = PBXGroup;
+			children = (
+				AAD045EC85954C2032192D0323A8A318 /* Frameworks */,
+			);
+			name = FirebaseAnalytics;
+			path = FirebaseAnalytics;
+			sourceTree = "<group>";
+		};
+		AAD045EC85954C2032192D0323A8A318 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32D434212EDEE4F3E9BB5D0E543D6D6E /* FirebaseAnalytics.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		ACF75EDB472770C2DBF79D58914DAF3E /* FirebaseCore */ = {
+			isa = PBXGroup;
+			children = (
+				19D266493C0CD70CCF9E4891F30274A5 /* Frameworks */,
+			);
+			name = FirebaseCore;
+			path = FirebaseCore;
+			sourceTree = "<group>";
+		};
+		B5FC31B82C41005128B7806D0534BBAA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01CABD4C8D2DA4C24611A204293A9E23 /* FirebaseInstanceID.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
@@ -316,6 +360,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CF0806C944ABA7BF25BC855973CFD08E /* GoogleToolboxForMac */ = {
+			isa = PBXGroup;
+			children = (
+				9AFD2738A7091BE77214DF8EB26DEB3A /* Defines */,
+				91B45CDC12FF6D148A3A3B0ABDDC6680 /* NSData+zlib */,
+				1AE47D260E058C75E2FE1D5BCB258232 /* Support Files */,
+			);
+			name = GoogleToolboxForMac;
+			path = GoogleToolboxForMac;
+			sourceTree = "<group>";
+		};
 		D35AF013A5F0BAD4F32504907A52519E /* iOS */ = {
 			isa = PBXGroup;
 			children = (
@@ -324,34 +379,44 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		DCA2F2045316182977DBF1C71095BEF5 /* decode */ = {
+		E75617A633852C20848199F31B630738 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				653960365EB4D6CBD32BE530178CCD75 /* ChromaColorPicker */,
+				167D27002339C2058EFE78B9FFA412FA /* Firebase */,
+				A75F5B69793171DC9701964AE7A06214 /* FirebaseAnalytics */,
+				ACF75EDB472770C2DBF79D58914DAF3E /* FirebaseCore */,
+				4FBBA9114245B0561B7724964A460B30 /* FirebaseDatabase */,
+				73FC12C1A6AFF4F9783AEDDD56F42E0B /* FirebaseInstanceID */,
+				CF0806C944ABA7BF25BC855973CFD08E /* GoogleToolboxForMac */,
+				E95DD0D0160AD8425F8AB16F74317494 /* nanopb */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		E95DD0D0160AD8425F8AB16F74317494 /* nanopb */ = {
+			isa = PBXGroup;
+			children = (
+				B6E19773F71B040FA7B05079F47210E9 /* pb.h */,
+				106BC6123ECC29B23F641BCDB1791A3F /* pb_common.c */,
+				D81CFBF2C2CA0581BE5DB221A6D99350 /* pb_common.h */,
+				21B532D0E4C2E9DD4A529C4755BDCF4E /* pb_decode.c */,
+				41ACA4ADA96FC5C1393556E7094808EF /* pb_decode.h */,
+				DA245820AB78400ADC48BCEFA3CFC834 /* pb_encode.c */,
+				A7809B6D2A1D71901D3235B7E71B8D0C /* pb_encode.h */,
+				EEA2A59095A66991966009D44985F038 /* decode */,
+				9ACD495BC77D6EA8C678BFB63D266B4E /* encode */,
+				52610360B35F6C77A4089027D9386D30 /* Support Files */,
+			);
+			name = nanopb;
+			path = nanopb;
+			sourceTree = "<group>";
+		};
+		EEA2A59095A66991966009D44985F038 /* decode */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			name = decode;
-			sourceTree = "<group>";
-		};
-		F527DBFF51C42556467F2E96C655951E /* FirebaseDatabase */ = {
-			isa = PBXGroup;
-			children = (
-				61CCEC50628FDED4B580E426D2ECE8D7 /* Frameworks */,
-			);
-			name = FirebaseDatabase;
-			path = FirebaseDatabase;
-			sourceTree = "<group>";
-		};
-		FA3FEBD1EA2F082C5F2B6302767F0987 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BE9562C7EFCC143DE11CDC2D6294204 /* Info.plist */,
-				874FAC58A676B35C675861EBCA1E3D22 /* nanopb.modulemap */,
-				A3FD1AC46277EA6C7F3C190F4707C092 /* nanopb.xcconfig */,
-				F856E98627FEBA34AC4356BD4F16EE1D /* nanopb-dummy.m */,
-				AD0E055AAB02750D7D2B2B6C2D448DA0 /* nanopb-prefix.pch */,
-				78A7844B55E6AEAF3BD1DE064F2BE574 /* nanopb-umbrella.h */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/nanopb";
 			sourceTree = "<group>";
 		};
 		FFFFB520383A1A3BE22377529D2729DD /* Pods-pixels */ = {
@@ -375,6 +440,14 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
+		0281F6CF0A0DBD14799CC90C11959059 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3A13496946ED696356E9741FA6CDDB0D /* ChromaColorPicker-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4547B9AF8085A499AA35614798F8F9E4 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
@@ -387,11 +460,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C4F0AF1FE8F029592134D9146258AC2A /* Headers */ = {
+		CBCA03ECFB388F211602B5873AD86DE5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7D03FE51834BC8079C3265F3E61920BB /* Pods-pixels-umbrella.h in Headers */,
+				D66EF81FF152D235E4C989A3F8B8ED8C /* Pods-pixels-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -422,26 +495,44 @@
 			);
 			name = GoogleToolboxForMac;
 			productName = GoogleToolboxForMac;
-			productReference = 5956636F00BDF0BF3793E5EF7774CF40 /* GoogleToolboxForMac.framework */;
+			productReference = 4DF7CC4B5D872B66B4078D78E0DA0880 /* GoogleToolboxForMac.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		AEBD91E9A3844AE920F58AA4CB7810DC /* Pods-pixels */ = {
+		5D5B67B3AA00C5080957A07A50856C9F /* ChromaColorPicker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = D042D62E80467C58ACBD871C69C9A699 /* Build configuration list for PBXNativeTarget "Pods-pixels" */;
+			buildConfigurationList = 87E2321232B22BB387E72EC4B92E6A45 /* Build configuration list for PBXNativeTarget "ChromaColorPicker" */;
 			buildPhases = (
-				CDC18BA11A8CF82792C54FA605A489E3 /* Sources */,
-				A9EC30C4F218B9FAD61B5A6A3D9A4440 /* Frameworks */,
-				C4F0AF1FE8F029592134D9146258AC2A /* Headers */,
+				6C8F337E12DBD2C158DAE6703982187D /* Sources */,
+				F22620ADA582D4A038502CCF209EFDB7 /* Frameworks */,
+				0281F6CF0A0DBD14799CC90C11959059 /* Headers */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				34164FEBCF64C1EE23006458B7D10D17 /* PBXTargetDependency */,
-				62E6025BBCB4D0B9197F27F99B03F227 /* PBXTargetDependency */,
+			);
+			name = ChromaColorPicker;
+			productName = ChromaColorPicker;
+			productReference = 9B9513CB8B91A8AD1D6F816105BC2E80 /* ChromaColorPicker.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		885A003CAD29250D69D5018EB405FBC8 /* Pods-pixels */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C1138F49581E037B1E9AB5E399792FF0 /* Build configuration list for PBXNativeTarget "Pods-pixels" */;
+			buildPhases = (
+				062F28FEC21194AD7FE25574D2C276FF /* Sources */,
+				113420200746533B9EF2ECB6DA888ACE /* Frameworks */,
+				CBCA03ECFB388F211602B5873AD86DE5 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				951C520A3C2BE4AA907EFBDEE4CA47B4 /* PBXTargetDependency */,
+				10818DE99D65647787A1F6A5C8DAD8E3 /* PBXTargetDependency */,
+				3008BE5B254C5B0EF37DA6179AD24589 /* PBXTargetDependency */,
 			);
 			name = "Pods-pixels";
 			productName = "Pods-pixels";
-			productReference = 185AF76827B561885DFEAAF0D7E6F923 /* Pods_pixels.framework */;
+			productReference = D2458B44F3C884F25508FCDCD474F8AB /* Pods_pixels.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */ = {
@@ -458,7 +549,7 @@
 			);
 			name = nanopb;
 			productName = nanopb;
-			productReference = 480883B1D49DCDD9640312E959A18673 /* nanopb.framework */;
+			productReference = A175484F0E0F45E3D8475A4926317C38 /* nanopb.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -478,18 +569,27 @@
 				en,
 			);
 			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
-			productRefGroup = 207FCAA9BE9EEC647EA32EF35AE360AF /* Products */;
+			productRefGroup = 809048DFDEC3BD8063A73B4054AC36DB /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
+				5D5B67B3AA00C5080957A07A50856C9F /* ChromaColorPicker */,
 				00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */,
 				E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */,
-				AEBD91E9A3844AE920F58AA4CB7810DC /* Pods-pixels */,
+				885A003CAD29250D69D5018EB405FBC8 /* Pods-pixels */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
+		062F28FEC21194AD7FE25574D2C276FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				351B1B7CD26B8BB46994293A8A466140 /* Pods-pixels-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		238527BE8D494586023F2A2B8A60D242 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -510,35 +610,81 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CDC18BA11A8CF82792C54FA605A489E3 /* Sources */ = {
+		6C8F337E12DBD2C158DAE6703982187D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02D152AF3EEB3A5B5224C5BD3C38B091 /* Pods-pixels-dummy.m in Sources */,
+				8FA4596E91DB11BCCF244B62782D1259 /* ChromaAddButton.swift in Sources */,
+				F86AA6170FB017A8960C6D1739C4D2D6 /* ChromaColorPicker-dummy.m in Sources */,
+				1F9EA1158D06B25338F3FC9FDFB79931 /* ChromaColorPicker.swift in Sources */,
+				1C9420F6D4D38EEF754615DFAD27CB7B /* ChromaHandle.swift in Sources */,
+				50229A0E5D760C7041EE6B62F8FA4B4B /* ChromaShadeSlider.swift in Sources */,
+				248C873B272A55DAE90DD71B69AF7E9D /* UIColor+Utilities.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		34164FEBCF64C1EE23006458B7D10D17 /* PBXTargetDependency */ = {
+		10818DE99D65647787A1F6A5C8DAD8E3 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = GoogleToolboxForMac;
 			target = 00103D6C821BE85971C563025527BA5D /* GoogleToolboxForMac */;
-			targetProxy = 6861554888A901E0DC46D7BB84B548A5 /* PBXContainerItemProxy */;
+			targetProxy = 2A34588CBAA1143283DD4D1463FF2846 /* PBXContainerItemProxy */;
 		};
-		62E6025BBCB4D0B9197F27F99B03F227 /* PBXTargetDependency */ = {
+		3008BE5B254C5B0EF37DA6179AD24589 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = nanopb;
 			target = E4DD95323C54A78F879DAB0F1508B8E7 /* nanopb */;
-			targetProxy = 41D568B657F9C75521AF33DE07C3E889 /* PBXContainerItemProxy */;
+			targetProxy = 4E40DF6DD4E832938D0A143BBC509DB4 /* PBXContainerItemProxy */;
+		};
+		951C520A3C2BE4AA907EFBDEE4CA47B4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ChromaColorPicker;
+			target = 5D5B67B3AA00C5080957A07A50856C9F /* ChromaColorPicker */;
+			targetProxy = 908BF3122A977C76211F41B50E3E37ED /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		04932665D3D80DD37E23975955EBE900 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97D91206338CBB740CD0FFFA727F9DAC /* ChromaColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ChromaColorPicker/ChromaColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChromaColorPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = ChromaColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 		05DD489EAA33AC2317E2842BAFB6AB30 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3FD1AC46277EA6C7F3C190F4707C092 /* nanopb.xcconfig */;
+			baseConfigurationReference = D9BD54ADCD65CB03207C72AADA311A22 /* nanopb.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -568,6 +714,44 @@
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
+		};
+		0CD1148BA37EE037467E2A8620E28B2B /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 473106A5753542BE28E488F06C06F7DE /* Pods-pixels.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-pixels/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-pixels/Pods-pixels.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_pixels;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
 		};
 		163D87BE96A63549B0EACF1CC31A2E90 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -617,45 +801,9 @@
 			};
 			name = Debug;
 		};
-		2D6A4F754635198847B8145433E02258 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5CFDA9EA14FD3454E88CF51676C1229C /* Pods-pixels.debug.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = dwarf;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-pixels/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-pixels/Pods-pixels.modulemap";
-				MTL_ENABLE_DEBUG_INFO = YES;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_pixels;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 		4E3BB37312E5D4518EDFAD78B7C89440 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8D68B06D69182C396EE72128A465513 /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = 345EE9EA6C9640E51372FAB4799081E0 /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -680,42 +828,6 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		679AEF503639F95EDE39558B9D34ECD4 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 473106A5753542BE28E488F06C06F7DE /* Pods-pixels.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				INFOPLIST_FILE = "Target Support Files/Pods-pixels/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-pixels/Pods-pixels.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_pixels;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -768,7 +880,7 @@
 		};
 		75D882502B7B07FE86109B73712E900C /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A3FD1AC46277EA6C7F3C190F4707C092 /* nanopb.xcconfig */;
+			baseConfigurationReference = D9BD54ADCD65CB03207C72AADA311A22 /* nanopb.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -801,7 +913,7 @@
 		};
 		BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8D68B06D69182C396EE72128A465513 /* GoogleToolboxForMac.xcconfig */;
+			baseConfigurationReference = 345EE9EA6C9640E51372FAB4799081E0 /* GoogleToolboxForMac.xcconfig */;
 			buildSettings = {
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
@@ -832,6 +944,79 @@
 			};
 			name = Debug;
 		};
+		D0E8D87EC10CF4E529C300D7A8CFA766 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CFDA9EA14FD3454E88CF51676C1229C /* Pods-pixels.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-pixels/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-pixels/Pods-pixels.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_pixels;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F8FE9C555FA8DEB28EBCD52D86267CF9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 97D91206338CBB740CD0FFFA727F9DAC /* ChromaColorPicker.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/ChromaColorPicker/ChromaColorPicker-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ChromaColorPicker/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/ChromaColorPicker/ChromaColorPicker.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = ChromaColorPicker;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -844,20 +1029,29 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		87E2321232B22BB387E72EC4B92E6A45 /* Build configuration list for PBXNativeTarget "ChromaColorPicker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				04932665D3D80DD37E23975955EBE900 /* Debug */,
+				F8FE9C555FA8DEB28EBCD52D86267CF9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C1138F49581E037B1E9AB5E399792FF0 /* Build configuration list for PBXNativeTarget "Pods-pixels" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D0E8D87EC10CF4E529C300D7A8CFA766 /* Debug */,
+				0CD1148BA37EE037467E2A8620E28B2B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		C43D9CA5106C6CCEF973B7EDF833947B /* Build configuration list for PBXNativeTarget "GoogleToolboxForMac" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				BE9B55DCDA299EAE202F6DB76CAA485A /* Debug */,
 				4E3BB37312E5D4518EDFAD78B7C89440 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D042D62E80467C58ACBD871C69C9A699 /* Build configuration list for PBXNativeTarget "Pods-pixels" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				2D6A4F754635198847B8145433E02258 /* Debug */,
-				679AEF503639F95EDE39558B9D34ECD4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

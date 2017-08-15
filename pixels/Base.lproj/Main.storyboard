@@ -17,22 +17,27 @@
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                    <view key="view" multipleTouchEnabled="YES" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="xUf-cf-nfZ">
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" maximumZoomScale="2" translatesAutoresizingMaskIntoConstraints="NO" id="xUf-cf-nfZ">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <view userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Hrk-J7-tCd">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="10000" height="10000"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     </view>
                                 </subviews>
                             </scrollView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xUf-cf-nfZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="0zs-7w-b1g"/>
+                            <constraint firstItem="xUf-cf-nfZ" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Ak9-D9-Jbf"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="xUf-cf-nfZ" secondAttribute="bottom" id="eIX-bR-MmI"/>
+                            <constraint firstAttribute="trailing" secondItem="xUf-cf-nfZ" secondAttribute="trailing" id="fuY-OK-zDF"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="scrollImage" destination="Hrk-J7-tCd" id="5PR-jV-Xtz"/>

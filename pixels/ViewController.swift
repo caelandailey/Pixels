@@ -8,15 +8,20 @@
 
 import UIKit
 import Firebase
+import ChromaColorPicker
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class ViewController: UIViewController, UIScrollViewDelegate, ChromaColorPickerDelegate{
     
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var scrollImage: UIView!
     
+    let colorPickerView = UIView()
+    
     var rPixel: UInt8 = 80
     var gPixel: UInt8 = 80
     var bPixel: UInt8 = 80
+    
+    var color = "000000"
     
     let colorPickerHeight:CGFloat = 100
     
@@ -110,9 +115,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
             self.scrollImage.addSubview(image)
             }
         })
-        
-        
-
     }
     func loadPixels() {
         
@@ -164,7 +166,7 @@ class ViewController: UIViewController, UIScrollViewDelegate {
     
     func addPixel(x: Int, y: Int) {
         
-        var itemRef = Database.database().reference().child("\(x),\(y)")
+        let itemRef = Database.database().reference().child("\(x),\(y)")
         
         let t1 = Timestamp
         let time = 0 - Int(t1)
@@ -177,7 +179,32 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         itemRef.child("timeline").setValue(time)
     }
     
+    func showColorPicker() {
+        if self.view.subviews.contains(colorPickerView) {
+            colorPickerView.removeFromSuperview()
+        } else {
+            self.view.insertSubview(colorPickerView, aboveSubview: scrollView)
+        }
+        
+    }
+    
     func setupColorPicker() {
+        
+        let button = UIButton()
+        let size = self.view.frame.width/7
+        button.frame = CGRect(x: (self.view.frame.width/2)-size/2, y: self.view.frame.size.height-size-20, width: size, height: size)
+        button.addTarget(self, action: #selector(buttonAnimationNormal), for: .touchUpInside)
+        button.addTarget(self, action: #selector(showColorPicker), for: .touchUpInside)
+        
+        button.addTarget(self, action: #selector(buttonAnimationSmall), for: .touchDown)
+        button.addTarget(self, action: #selector(buttonAnimationNormal), for: .touchDragExit)
+        button.adjustsImageWhenHighlighted = false
+        button.setImage(UIImage(named: "color_icon.png"), for: UIControlState.normal)
+        
+        self.view.addSubview(button)
+        
+        return
+        
         let screenWidth = self.view.frame.width
         
         let view = UIView()
@@ -206,11 +233,27 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         addColorButton(color: 0xffff00, view: view, pos: 8) // Yellow
         addColorButton(color: 0x0000ff, view: view, pos: 4) // Blue
         
+        
         view.addSubview(line)
         self.view.addSubview(view)
     }
     
+    func buttonAnimationSmall(sender:UIButton) {
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        sender.transform = CGAffineTransform(scaleX: 0.85, y: 0.85)
+        })
+    }
+    func buttonAnimationNormal(sender:UIButton) {
+        UIView.animate(withDuration: 0.2,
+                       animations: {
+                        sender.transform = CGAffineTransform.identity
+        })
+        
+    }
     private func addColorButton(color: Int, view: UIView, pos: Int) {
+        
+        return
         
         let button = UIButton()
         let size = 35
@@ -231,7 +274,6 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         button.layer.borderColor = UIColor.darkGray.cgColor
         button.addTarget(self, action: #selector(setColor), for: .touchUpInside)
         view.addSubview(button)
-        
     }
     
     func setColor(sender: UIButton) {
@@ -243,19 +285,35 @@ class ViewController: UIViewController, UIScrollViewDelegate {
         }
     }
     
+    func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
+        
+        print(colorPicker.hexLabel.text!)
+        print(colorPicker.currentColor)
+    }
+    
     override func viewDidLoad() {
         
         super.viewDidLoad()
+        
+        colorPickerView.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: self.view.frame.size.height)
+        let neatColorPicker = ChromaColorPicker(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
+        //neatColorPicker.delegate = self //ChromaColorPickerDelegate
+        neatColorPicker.padding = 5
+        neatColorPicker.delegate = self
+        neatColorPicker.stroke = 3
+        neatColorPicker.hexLabel.textColor = UIColor.black
+        
+        colorPickerView.addSubview(neatColorPicker)
         setupColorPicker()
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(showMoreActions))
         tap.numberOfTapsRequired = 1
         scrollView.addGestureRecognizer(tap)
         
-        scrollView.contentSize = CGSize(width: self.view.frame.size.width, height: self.view.frame.size.height)
+        scrollView.contentSize = CGSize(width: 10000, height: self.view.frame.size.height)
         scrollView.delegate = self
-        scrollView.minimumZoomScale = 1
-        scrollView.maximumZoomScale = 50.0
+        scrollView.minimumZoomScale = 1.0
+        scrollView.maximumZoomScale = 120.0
         scrollView.zoomScale = 1.0
         
         loadAllPixels()

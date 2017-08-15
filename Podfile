@@ -9,6 +9,7 @@ target 'pixels' do
 
 pod 'Firebase/Core'
 pod ‘Firebase/Database'
+pod 'ChromaColorPicker'
 
 
 end
