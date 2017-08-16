@@ -21,7 +21,7 @@ class ViewController: UIViewController, UIScrollViewDelegate, ChromaColorPickerD
     var gPixel: UInt8 = 80
     var bPixel: UInt8 = 80
     
-    var color = "000000"
+    var blockColor = 0x000000
     
     let colorPickerHeight:CGFloat = 100
     
@@ -91,21 +91,22 @@ class ViewController: UIViewController, UIScrollViewDelegate, ChromaColorPickerD
             var r:UInt8 = 0
             var g:UInt8 = 0
             var b:UInt8 = 0
+            var hex = 0
             
             for cell in obj.children.allObjects as! [DataSnapshot] {
                 
                 switch cell.key {
-                    
+                case "hex": hex = cell.value as! Int
                 case "x": x = cell.value as! Int
                 case "y": y = cell.value as! Int
-                case "r": r = cell.value as! UInt8
-                case "g": g = cell.value as! UInt8
-                case "b": b = cell.value as! UInt8
                 default: break
                 }
             }
             
-            let pixel = PixelData(a: 255, r: r, g:g, b: b)
+                r = UInt8(((hex & 0xFF0000) >> 16)/255)
+                 g = UInt8(((hex & 0xFF00) >> 8)/255)
+                 b = UInt8((hex & 0xFF)/255)
+            let pixel = PixelData(a: 255, r: r, g: g, b: b)
             
             let image = UIImageView()
             image.image = self.imageFromBitmap(pixels: [pixel], width: 1, height: 1)
@@ -170,12 +171,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, ChromaColorPickerD
         
         let t1 = Timestamp
         let time = 0 - Int(t1)
-        
+        itemRef.child("hex").setValue(blockColor)
         itemRef.child("x").setValue(x)
         itemRef.child("y").setValue(y)
-        itemRef.child("r").setValue(rPixel)
-        itemRef.child("g").setValue(gPixel)
-        itemRef.child("b").setValue(bPixel)
         itemRef.child("timeline").setValue(time)
     }
     
@@ -288,7 +286,9 @@ class ViewController: UIViewController, UIScrollViewDelegate, ChromaColorPickerD
     func colorPickerDidChooseColor(_ colorPicker: ChromaColorPicker, color: UIColor) {
         
         print(colorPicker.hexLabel.text!)
-        print(colorPicker.currentColor)
+        
+        print(color.toHexInt())
+        blockColor = color.toHexInt()
     }
     
     override func viewDidLoad() {
